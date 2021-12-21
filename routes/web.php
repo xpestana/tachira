@@ -18,18 +18,12 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Front/Home');
 })->name('home');
-Route::get('home-2', function () {
-    return Inertia::render('Front/Home-2');
-})->name('home.2');
-Route::get('home-3', function () {
-    return Inertia::render('Front/Home-3');
-})->name('home.3');
-Route::get('nuestra-empresa', function () {
+Route::get('/nuestra-empresa', function () {
     return Inertia::render('Front/Company');
 })->name('about.us');
-Route::get('servicios/{service}', function ($service) {
-    return Inertia::render('Front/Services', compact('service'));
-})->name('services');
+Route::get('/contacto', function () {
+    return Inertia::render('Front/Contact');
+})->name('contact');
 
 /*
 Route::get('/', function () {

@@ -23,15 +23,15 @@
         </Link>
     </div>
     <div class="buy-button" v-if="isIcons !== true">
-      <Link
-        :href="route('register')"
+      <a
+        href="https://api.whatsapp.com/send?phone=5804149774393&text=hola,%20quiero%20reservar%20un%20viaje%20a"
         target="_blank"
         style="
           background-color: #25D366;
           color: #fff;
         "
         class="btn mt-4"
-        ><i class="fab fa-whatsapp"></i> Reserva tu viaje</Link
+        ><i class="fab fa-whatsapp"></i> Reserva tu viaje</a
       >
     </div>
     <ul class="buy-button list-inline mb-0" v-if="isIcons === true">
@@ -104,7 +104,7 @@
             class="navigation-menu"
             :class="{ 'nav-light': navLight === true }"
           >
-            <li>
+            <li class="has-submenu">
               <Link :href="route('home')" class="side-nav-link-ref">Inicio</Link>
             </li>
             <li class="has-submenu">
@@ -112,19 +112,19 @@
               >
             </li>
             <li class="has-submenu">
-              <Link :href="route('login')">Contacto</Link>
+              <Link :href="route('contact')" class="side-nav-link-ref">Contacto</Link>
             </li>
-            <li class="has-submenu">
+            <li class="has-submenu" hidden>
               <Link :href="route('login')">Acceder</Link>
             </li>
           </ul>
           <!--end navigation menu-->
           <div class="buy-menu-btn d-none">
-            <Link 
-              :href="route('register')"
+            <a 
+              href="https://api.whatsapp.com/send?phone=5804149774393&text=hola,%20quiero%20reservar%20un%20viaje%20a"
               target="_blank"
               class="btn btn-primary"
-              ><i class="fab fa-whatsapp"></i> Reserva tu viaje</Link>
+              ><i class="fab fa-whatsapp"></i> Reserva tu viaje</a>
           </div>
           <!--end login button-->
         </div>
@@ -196,7 +196,7 @@ export default {
     }
 
     if (matchingMenuItem) {
-      matchingMenuItem.classList.add("active");
+      matchingMenuItem.classList.add("actives");
       var parent = matchingMenuItem.parentElement;
 
       /**
@@ -204,17 +204,17 @@ export default {
        * We should come up with non hard coded approach
        */
       if (parent) {
-        parent.classList.add("active");
+        parent.classList.add("actives");
         const parent2 = parent.parentElement;
         if (parent2) {
-          parent2.classList.add("active");
+          parent2.classList.add("actives");
           const parent3 = parent2.parentElement;
           if (parent3) {
-            parent3.classList.add("active");
+            parent3.classList.add("actives");
             const parent4 = parent3.parentElement;
             if (parent4) {
               const parent5 = parent4.parentElement;
-              parent5.classList.add("active");
+              parent5.classList.add("actives");
             }
           }
         }

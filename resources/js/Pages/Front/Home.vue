@@ -24,7 +24,6 @@
                   href="javascript:void(0)"
                   class="btn btn-icon btn-pills btn-lg btn-light"
                 >
-                  <arrow-down-icon class="icons"></arrow-down-icon>
                 </a>
               </div>
             </div>
@@ -42,9 +41,7 @@
                       <div class="form-group">
                         <label>Destination</label>
                         <div class="position-relative">
-                          <map-pin-icon
-                            class="fea icon-sm icons"
-                          ></map-pin-icon>
+                          
                           <input
                             type="text"
                             class="form-control pl-5"
@@ -58,13 +55,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label> Check in : </label>
-                        <flat-pickr
-                          v-model="date"
-                          class="flatpickr flatpickr-input form-control"
-                          id="checkin-date"
-                          name="date"
-                        >
-                        </flat-pickr>
+                        
                       </div>
                     </div>
                     <!--end col-->
@@ -72,13 +63,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label> Check out : </label>
-                        <flat-pickr
-                          v-model="checkoutdate"
-                          class="flatpickr flatpickr-input form-control"
-                          id="checkout-date"
-                          name="date"
-                        >
-                        </flat-pickr>
+                        
                       </div>
                     </div>
                     <!--end col-->
@@ -86,7 +71,6 @@
                       <div class="form-group">
                         <label>Your Email</label>
                         <div class="position-relative">
-                          <mail-icon class="fea icon-sm icons"></mail-icon>
                           <input
                             type="email"
                             class="form-control pl-5"
@@ -245,7 +229,7 @@
 
           <div class="col-lg-12 text-center col-md-4 mt-4 pt-2">
             <a href="javascript:void(0)" class="btn btn-primary"
-              >See more <arrow-right-icon class="fea icon-sm"></arrow-right-icon
+              >See more 
             ></a>
           </div>
           <!--end col-->
@@ -308,11 +292,11 @@
                       >
                     </li>
                   </ul>
-                  <router-link
+                  <Link
                     to="/page-blog-detail"
                     class="text-muted readmore"
                     >Read More <i class="mdi mdi-chevron-right"></i
-                  ></router-link>
+                  ></Link>
                 </div>
               </div>
               <div class="author">
